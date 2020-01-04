@@ -57,26 +57,21 @@ final ThemeData _kShrineTheme = _buildShrineTheme();
 ThemeData _buildShrineTheme() {
   final ThemeData base = ThemeData.light();
   return base.copyWith(
-      accentColor: kShrineBrown900,
-      primaryColor: kShrinePink100,
-      buttonTheme: base.buttonTheme.copyWith(
-        buttonColor: kShrinePink100,
-        textTheme: ButtonTextTheme.normal,
-      ),
-      scaffoldBackgroundColor: kShrineBackgroundWhite,
-      cardColor: kShrineBackgroundWhite,
-      textSelectionColor: kShrinePink100,
-      errorColor: kShrineErrorRed,
-      // TODO: Add the text themes (103)
-      textTheme: _buildShrineTextTheme(base.textTheme),
-      primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
-      accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
-      // TODO: Add the icon themes (103)
-      primaryIconTheme: base.iconTheme.copyWith(color: kShrineBrown900),
-      // TODO: Decorate the inputs (103)
-      inputDecorationTheme: InputDecorationTheme(
-        border: CutCornersBorder(),
-      ));
+    primaryColor: kShrinePurple,
+    buttonTheme: base.buttonTheme.copyWith(
+      buttonColor: kShrinePurple,
+      textTheme: ButtonTextTheme.primary,
+      colorScheme: ColorScheme.light().copyWith(primary: kShrinePurple),
+    ),
+    scaffoldBackgroundColor: kShrineBackgroundWhite,
+    textTheme: _buildShrineTextTheme(base.textTheme),
+    primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
+    accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
+    primaryIconTheme: base.iconTheme.copyWith(color: kShrineSurfaceWhite),
+    inputDecorationTheme: InputDecorationTheme(
+      border: CutCornersBorder(),
+    ),
+  );
 }
 
 // TODO: Build a Shrine Text Theme (103)
@@ -92,9 +87,5 @@ TextTheme _buildShrineTextTheme(TextTheme base) {
           fontSize: 14.0,
         ),
       )
-      .apply(
-        fontFamily: 'Rubik',
-        displayColor: kShrineBrown900,
-        bodyColor: kShrineBrown900,
-      );
+      .apply(fontFamily: 'Raleway');
 }
